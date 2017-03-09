@@ -1,0 +1,34 @@
+@import 'settings';
+@import 'compass';
+@import './cards-mixins';
+
+.event-card {
+  @include basicCard;
+  min-height: 80px;
+  padding-top: 15px;
+  padding-left: 85px;
+  padding-right: 15px;
+  padding-bottom: 3px;
+  margin-bottom: 20px;
+
+  .event-date {
+    color: $white;
+    text-align: center;
+    width: 70px;
+    background: $primary-accent-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding-top: 15px;
+
+    .date {
+      font-family: 'Proxima Nova Bold', sans-serif;
+      font-size: calculateEm(24px);
+    }
+
+    .month {
+      font-size: calculateEm(14px);
+    }
+  }
+}

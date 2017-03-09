@@ -1,0 +1,10 @@
+{
+  "vendors": {
+    "js": "/assets/vendors.js",
+    "css": "/assets/vendors.ffbb3f846f3ae5cfb4b693890d5b706e.css"
+  },
+  "socio": {
+    "js": "/assets/socio.9f713f79deef37065b5c.js",
+    "css": "/assets/socio.1fb2d8d9af820cc41d2c90504a8c08b4.css"
+  }
+}

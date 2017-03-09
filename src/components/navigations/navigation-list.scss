@@ -1,0 +1,43 @@
+@import "settings";
+@import "compass";
+
+$active-list-bg: #eeeeee;
+.navigation-list {
+  list-style: none;
+  padding-left: 0;
+  > li {
+    position: relative;
+    border-left: 3px solid transparent;
+    position: relative;
+    > div {
+      font-family: 'Proxima Nova Bold', sans-serif;
+      font-size: calculateEm(14px);
+      line-height: 14px;
+      color: $tertiary-type-color;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 27px;
+      padding-right: 50px;
+      cursor: pointer;
+      &:hover {
+        color: $secondary-type-color;
+      }
+    }
+    &.active {
+      background: $active-list-bg;
+      border-left-color: $primary-accent-color;
+      > div {
+        color: $secondary-type-color;
+      }
+    }
+  }
+  .badge {
+    font-family: 'Proxima Nova Bold';
+    font-size: calculateEm(12px);
+    background: $primary-accent-color;
+    position: absolute;
+    padding: 2px 7px;
+    right: 10px;
+    top: 10px;
+  }
+}

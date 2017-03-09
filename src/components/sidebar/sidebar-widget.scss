@@ -1,0 +1,28 @@
+@import 'settings';
+@import 'compass';
+
+.sidebar-widget {
+  margin-bottom: 10px;
+  .sidebar-title-bar {
+    margin-bottom: 23px;
+    h4 {
+      font-family: 'Proxima Nova Bold', sans-serif;
+      font-size: calculateEm(14px);
+      color: $quaternary-type-color;
+      > svg {
+        margin-right: 6px;
+        vertical-align: middle;
+      }
+    }
+    a {
+      font-family: 'Proxima Nova Semi-Bold', sans-serif;
+      font-size: calculateEm(12px);
+      line-height: 16px;
+      color: $tertiary-type-color;
+      float: right;
+      &:hover {
+        color: $quaternary-type-color;
+      }
+    }
+  }
+}

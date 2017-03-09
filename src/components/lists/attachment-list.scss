@@ -1,0 +1,18 @@
+@import "settings";
+@import "compass";
+
+.attachment-list {
+  li > a {
+    font-family: 'Proxima Nova Semi-Bold', sans-serif;
+    font-size: calculateEm(12px);
+    color: $tertiary-type-color;
+    width: 100%;
+    > svg {
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+    &:hover {
+      color: $primary-type-color;
+    }
+  }
+}

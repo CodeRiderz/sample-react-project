@@ -1,0 +1,57 @@
+@import 'settings';
+@import 'compass';
+
+.dashboard {
+  padding-top: $header-height;
+  &.with-sidebar {
+    padding-left: $sidebar-width;
+
+    .sidebar {
+      position: absolute;
+      top: $header-height;
+      bottom: 0;
+      left: 0;
+      overflow: hidden;
+    }
+  }
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  .main-wrapper {
+    height: 100%;
+    overflow: auto;
+  }
+  .dashboard-column {
+    border-left: 1px solid $tertiary-border-color;
+    border-right: 1px solid $tertiary-border-color;
+    height: 100%;
+    margin-left: -1px;
+    &:last-of-type {
+      border-right: 0;
+    }
+    > div {
+      display: inline-block;
+      width: 100%;
+      vertical-align: top;
+    }
+
+    .scrollbar-wrapper {
+      overflow: hidden;
+    }
+    .custom-scrollbar {
+      .view > div {
+        margin-left: 20px;
+        margin-right: 20px;
+        &:first-child {
+          margin-top: 20px;
+        }
+        &:last-child {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}

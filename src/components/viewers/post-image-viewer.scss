@@ -1,0 +1,72 @@
+@import "settings";
+@import "compass";
+
+.post-image-viewer {
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  .main-image {
+    background: $secondary-accent-color;
+    display: inline-block;
+    width: auto;
+    min-height: 50px;
+  }
+
+  .thumbnails-wrapper {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    > h5 {
+      font-family: 'Proxima Nova Semi-Bold', sans-serif;
+      font-size: calculateEm(12px);
+      color: $white;
+      line-height: 12px;
+      margin-bottom: 7px;
+    }
+  }
+
+  .post-thumbnails {
+    margin-left: 0;
+    margin-bottom: 0;
+    display: inline-block;
+    vertical-align: top;
+    li {
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      background: $white;
+      padding: 0px;
+      overflow: hidden;
+      vertical-align: top;
+      cursor: pointer;
+      @include border-radius(2px);
+      @include box-shadow(0 2px 4px 0 rgba(0, 0, 0, 0.5));
+      ~ li {
+        margin-left: 5px;
+      }
+
+      &:hover > img {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  .prev-button,
+  .next-button {
+    display: inline-block;
+    vertical-align: top;
+    height: 10px;
+    margin: 15px 10px;
+    cursor: pointer;
+  }
+
+  .next-button > svg {
+    @include transform(rotate(-90deg));
+  }
+  .prev-button {
+    margin-left: 5px;
+  }
+  .prev-button > svg {
+    @include transform(rotate(90deg));
+  }
+}

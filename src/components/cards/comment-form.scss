@@ -1,0 +1,81 @@
+@import "settings";
+@import "compass";
+
+.comment-form {
+  margin-top: 10px;
+  border: 1px solid $secondary-border-color;
+  position: relative;
+  overflow: hidden;
+  @include border-radius(2px);
+
+  &.multi-line {
+    textarea.form-control {
+      max-height: 80px;
+    }
+  }
+
+  .form-control {
+    font-size: calculateEm(12px);
+    line-height: 16px;
+    border: 0px;
+    outline: none;
+    @include box-shadow(none);
+  }
+
+  textarea.form-control {
+    width: 100%;
+    width: calc(100% + 20px);
+    padding-right: 30px;
+    min-height: 30px;
+    padding-top: 7px;
+  }
+
+  .comment-attachment {
+    vertical-align: top;
+    margin-bottom: 3px;
+
+    &.empty-attachment {
+      position: absolute;
+      top: 1px;
+      right: 0;
+      width: 30px;
+      ul {
+        display: none;
+      }
+    }
+
+    .button-attachment {
+      float: right;
+      padding: 5px 10px 0px;
+      input {
+        display: none;
+      }
+      label {
+        line-height: 10px;
+        vertical-align: top;
+        cursor: pointer;
+        margin-bottom: 0;
+      }
+    }
+    ul {
+      padding-left: 10px;
+      list-style: none;
+      display: inline-block;
+      max-width: calc(100% - 30px);
+      width: 100%;
+      margin-bottom: 5px;
+      > li {
+        font-family: 'Proxima Nova Semi-Bold', sans-serif;
+        font-size: calculateEm(12px);
+        line-height: 12px;
+        color: $secondary-type-color;
+        cursor: pointer;
+
+        > svg {
+          vertical-align: middle;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}

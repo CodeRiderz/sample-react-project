@@ -1,0 +1,104 @@
+@import 'settings';
+@import 'compass';
+
+$header-background: $atomic;
+$header-text-color: $white;
+
+.header {
+  background: $header-background;
+  padding: 9px 18px;
+  height: $header-height;
+  z-index: 999;
+}
+
+.header-menu {
+  float: right;
+
+  .btn {
+    background: none;
+    border: 0px;
+    outline: none!important;
+    padding: 5px 10px;
+    margin: 0px;
+    @include border-radius(0px);
+    &:hover, &:active {
+      background: none;
+      @include box-shadow(none)
+    }
+  }
+
+  .avatar {
+    display: inline-block;
+    background: $primary-background-color;
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    vertical-align: top;
+    @include border-radius(100%);
+    margin-top: -5px;
+    margin-left: 10px;
+    margin-bottom: -5px;
+  }
+
+  .profile-dropdown {
+    font-size: calculateEm(14px);
+    line-height: 24px;
+    letter-spacing: 1px;
+    color: $header-text-color;
+    border-left: 1px solid $primary-border-color!important;
+    padding-left: 20px;
+    padding-right: 5px;
+    margin-left: 10px!important;
+
+    .caret {
+      display: none;
+    }
+    + .dropdown-menu {
+      font-size: calculateEm(16px);
+      min-width: 138px;
+      padding: 5px 0px;
+      margin-top: 5px;
+      float: right;
+      left: auto;
+      right: 0;
+      @include border-radius(2px);
+      @include box-shadow(0 2px 6px 0 rgba(227, 227, 227, 0.35));
+      border: solid 1px #eeeeee;
+
+      > li > a {
+        font-family: 'Proxima Nova Semi-Bold', sans-serif;
+        font-size: calculateEm(12px);
+        line-height: 12px;
+        padding: 5px 14px;
+        color: $secondary-type-color;
+        &:hover {
+          background: none;
+          color: $tertiary-type-color;
+        }
+      }
+    }
+  }
+
+  .dropdown.open .profile-dropdown {
+    color: $header-text-color;
+    background: none;
+    @include box-shadow(none)
+  }
+}
+
+.menu-icon {
+  font-size: calculateEm(16px);
+  position: relative;
+  .menu-count {
+    font-family: 'Proxima Nova Bold';
+    font-size: calculateEm(12px);
+    line-height: 12px;
+    background: $torch-red;
+    color: $header-text-color;
+    padding: 3px 8px;
+    @include border-radius(1em);
+    position: absolute;
+    top: -2px;
+    right: -22%;
+  }
+}

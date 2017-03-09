@@ -1,0 +1,11 @@
+@import 'settings';
+@import 'compass';
+
+.sidebar {
+  max-width: $sidebar-width;
+  width: 100%;
+  border-right: 1px solid $secondary-border-color;
+  .sidebar-widget {
+    padding: 10px 20px;
+  }
+}

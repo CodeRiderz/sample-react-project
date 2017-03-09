@@ -1,0 +1,121 @@
+@import 'settings';
+@import 'compass';
+@import "animations";
+@import "vendor/animate";
+@import "loaders";
+
+body {
+  font-family: 'Proxima Nova Regular', sans-serif;
+  font-size: 16px;
+  color: $primary-type-color;
+  line-height: 24px;
+  background: $lavender;
+}
+
+svg {
+  vertical-align: top;
+}
+
+img {
+  max-width: 100%;
+}
+
+.form-control {
+  resize: none;
+  border: 1px solid $secondary-border-color;
+  padding: 5px 10px;
+  @include box-shadow(none);
+  @include border-radius(2px);
+
+  @include placeholder {
+    color: $tertiary-type-color;
+  }
+}
+
+.remove-attachment {
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 8px;
+  text-align: left;
+  color: $white;
+  line-height: 10px;
+  background: $charcoal;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  vertical-align: middle;
+  margin-left: 10px;
+  opacity: 0.3;
+  cursor: pointer;
+  padding-left: 3px;
+  @include border-radius(100%);
+  @include transition(all 0.3s ease);
+  &:before {
+    content: 'x';
+    font-family: 'Proxima Nova', sans-serif;
+    display: inline-block;
+  }
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.modal-wrapper {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  @include middleChild;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.62);
+  .modal-content {
+    max-width: 735px;
+    margin: 20px auto;
+    position: relative;
+    z-index: 2;
+    -webkit-animation: fadeInDown 0.5s;
+    -o-animation: fadeInDown 0.5s;
+    animation: fadeInDown 0.5s;
+    @include border-radius(2px);
+    @include box-shadow(none);
+
+    .modal-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      opacity: 0.5;
+      @include transition($primary-transition);
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.emoji-mart-emoji {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+// custom grids
+.gutter-0 {
+  @include gridCostumizer(0px)
+}
+
+.gutter-40 {
+  @include gridCostumizer(40px)
+}
+
+.custom-scrollbar.no-scroll-bar {
+  overflow: hidden;
+  .view {
+    width: 100%;
+    overflow: hidden;
+    padding-right: 20px;
+    box-sizing: content-box;
+    right: auto!important;
+  }
+}

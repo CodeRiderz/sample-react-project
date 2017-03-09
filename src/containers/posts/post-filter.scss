@@ -1,0 +1,53 @@
+@import "settings";
+@import "compass";
+
+.post-filter {
+  font-family: 'Proxima Nova Semi-Bold', sans-serif;
+  margin-bottom: 5px;
+  h5, select {
+    font-size: calculateEm(12px);
+  }
+  h5 {
+    display: inline-block;
+    color: $tertiary-type-color;
+  }
+  .dropdown {
+    .dropdown-toggle, .dropdown-menu > li > a {
+      font-size: calculateEm(12px);
+      color: $primary-border-color;
+    }
+    .dropdown-toggle {
+      background: transparent!important;
+      border: 0px!important;
+      @include box-shadow(none!important);
+      padding-left: 7px;
+      padding-right: 7px;
+    }
+    .dropdown-menu {
+      min-width: 138px;
+      border: solid 1px $secondary-border-color;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      @include border-radius(2px);
+      @include box-shadow(0 2px 6px 0 rgba(227, 227, 227, 0.35));
+
+      li > a {
+        background: transparent!important;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      li > a > svg {
+        float:right;
+        margin-top: 2px;
+      }
+
+
+    }
+  }
+  &.multi {
+    .dropdown > .dropdown-menu > li:not(.active) > a {
+      color: $tertiary-type-color;
+    }
+  }
+}

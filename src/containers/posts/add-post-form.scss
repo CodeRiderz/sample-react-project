@@ -1,0 +1,57 @@
+@import 'settings';
+@import 'compass';
+
+.add-post-form {
+  background: $white;
+  border: 1px solid $secondary-border-color;
+  margin-bottom: 10px;
+  .form-control {
+    font-size: calculateEm(14px);
+    border: none;
+    height: 90px;
+    padding: 10px;
+    @include placeholder {
+      font-size: calculateEm(14px);
+      color: $tertiary-type-color;
+      padding-top: 2px;
+    }
+  }
+  .add-post-control {
+    border-top: 1px solid $secondary-border-color;
+    padding: 10px;
+    
+    ul {
+      margin-bottom: 0;
+      > li {
+        font-size: calculateEm(14px);
+        line-height: 17px;
+        color: $secondary-type-color;
+        cursor: pointer;
+        label {
+          font-weight: normal;
+        }
+        svg {
+          margin-right: 5px;
+        }
+        ~ li {
+          margin-left: 10px;
+        }
+      }
+    }
+
+    .add-file-button {
+      label {
+        cursor: pointer;
+      }
+      input {
+        display: none;
+      }
+    }
+  }
+
+  .attachment-list {
+    padding: 5px;
+    border-top: 1px solid $secondary-border-color;
+    margin-bottom: 0;
+  }
+}

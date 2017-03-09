@@ -1,0 +1,47 @@
+/* Styling Variables */
+$base-font-size: 16px;
+
+/* Colours
+ * name source: http://www.color-blindness.com/color-name-hue/
+ */
+$atomic: #37474F;
+$lavender: #f8fbfd;
+$smalt-blue: #4c5f68;
+$dim-gray: #5f5f5f;
+$charcoal: #4a4a4a;
+$light-gray: #d3d3d3;
+$torch-red: #fb0046;
+$white: #FFFFFF;
+$emerald: #00CB83;
+$white-smoke: #eeeeee;
+$white-smoke-soft: #f9f9f9;
+$pattens-blue: #eff5fa;
+$deep-pink: #ff0070;
+$suva-gray: #878787;
+
+/* Backgrounds */
+$primary-background-color: $lavender;
+$secondary-background-color: $white-smoke-soft;
+
+/* Borders */
+$primary-border-color: $smalt-blue;
+$secondary-border-color: $white-smoke;
+$tertiary-border-color: $pattens-blue;
+
+/* Type */
+$primary-type-color: $charcoal;
+$secondary-type-color: $dim-gray;
+$tertiary-type-color: $light-gray;
+$quaternary-type-color: $smalt-blue;
+
+/* Accent */
+$primary-accent-color: $emerald;
+$secondary-accent-color: $atomic;
+
+/* Properties */
+$primary-transition: all 0.3s ease;
+$header-height: 49px;
+$sidebar-width: 358px;
+
+@import "functions";
+@import "mixins";

@@ -1,0 +1,54 @@
+@import "settings";
+@import "compass";
+
+$event-date-width: 60px;
+.event-image-viewer {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid $secondary-border-color;
+  @include border-radius(2px);
+
+  .image-wrapper {
+    overflow: hidden;
+  }
+
+  .event-card {
+    background: #fcfcfc;
+    min-height: 64px;
+    padding-left: $event-date-width + 10px;
+    padding-top: 10px;
+    margin-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid $secondary-border-color;
+    @include box-shadow(none);
+
+    .event-date {
+      width: $event-date-width;
+      color: $secondary-type-color;
+      text-align: center;
+      background: $white-smoke;
+      padding-top: 5px;
+      .date {
+        font-family: 'Proxima Nova Bold', sans-serif;
+        font-size: calculateEm(24px);
+      }
+      .month {
+        font-size: calculateEm(14px);
+      }
+    }
+
+    p {
+      line-height: 12px!important;
+      color: $tertiary-type-color!important;
+    }
+  }
+
+  .description {
+    padding: 10px;
+    a {
+      font-family: 'Proxima Nova Semi-Bold', sans-serif;
+      color: $primary-type-color;
+    }
+  }
+}

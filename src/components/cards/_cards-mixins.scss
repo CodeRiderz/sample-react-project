@@ -1,0 +1,32 @@
+@import "settings";
+@import "compass";
+
+@mixin basicCard ($withShadow: true) {
+  background: $white;
+  border: solid 1px $secondary-border-color;
+  position: relative;
+  @include border-radius(2px);
+  @if $withShadow { @include box-shadow(0 3px 0 0 $secondary-border-color) }
+
+  h4 {
+    font-family: 'Proxima Nova Bold', sans-serif;
+    font-size: calculateEm(14px);
+    line-height: 14px;
+    color: $secondary-type-color;
+    margin-top: 0;
+    margin-bottom: 7px;
+    > a {
+      color: $secondary-type-color;
+    }
+  }
+
+  p {
+    font-size: calculateEm(12px);
+    line-height: 12px;
+    color: $tertiary-type-color;
+    margin-bottom: 5px;
+    > strong {
+      font-family: 'Proxima Nova Semi-Bold', sans-serif;
+    }
+  }
+}

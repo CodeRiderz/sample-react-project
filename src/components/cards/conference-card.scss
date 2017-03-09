@@ -1,0 +1,44 @@
+@import 'settings';
+@import 'compass';
+@import './cards-mixins';
+
+.conference-card {
+  @include basicCard;
+  padding-top: 22px;
+  padding-left: 80px;
+  padding-right: 18px;
+  padding-bottom: 22px;
+  margin-bottom: 20px;
+
+  .conference-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 80px;
+    text-align: center;
+    @include middleChild;
+  }
+
+  .join-button {
+    font-family: 'Proxima Nova Bold', sans-serif;
+    font-size: calculateEm(12px);
+    line-height: 22px;
+    color: $quaternary-type-color;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    display: inline-block;
+    width: 80px;
+    height: 26px;
+    border-radius: 100px;
+    border: 2px solid $primary-border-color;
+    @include transition($primary-transition);
+
+    &:hover {
+      color: $white;
+      background: $quaternary-type-color;
+    }
+  }
+}

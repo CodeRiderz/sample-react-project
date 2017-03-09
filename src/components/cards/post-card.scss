@@ -1,0 +1,119 @@
+@import "settings";
+@import "compass";
+@import "./cards-mixins";
+
+.post-card {
+  @include basicCard(false);
+  padding: 15px 15px 10px;
+  margin-bottom: 20px;
+
+  .post-header {
+    padding-left: 50px;
+    position: relative;
+    .post-avatar {
+      background: $secondary-accent-color;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      overflow: hidden;
+      @include border-radius(2px);
+    }
+  }
+
+  .post-message {
+    margin-top: 15px;
+    p {
+      color: $primary-type-color;
+      line-height: 18px;
+    }
+    a {
+      word-break: break-all;
+    }
+  }
+
+  .post-control {
+    line-height: 14px;
+    color: $tertiary-type-color;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-top: 1px solid $secondary-border-color;
+    border-bottom: 1px solid $secondary-border-color;
+    margin-top: 10px;
+    margin-left: -15px;
+    margin-right: -15px;
+    @include user-select(none);
+    > ul {
+      margin-bottom: 0;
+    }
+    .left-nav {
+      font-family: 'Proxima Nova', sans-serif;
+      letter-spacing: 1px;
+      font-size: calculateEm(14px);
+      float: left;
+
+      > li {
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .right-nav {
+      font-family: 'Proxima Nova Semi-Bold', sans-serif;
+      font-size: calculateEm(12px);
+      float: right;
+      padding-top: 5px;
+      margin-top: -3px;
+      margin-bottom: -3px;
+
+      .post-control-button {
+        margin-top: -5px;
+        margin-right: 6px;
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+
+        svg {
+          position: relative;
+          z-index: 1;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          width: 15px;
+          height: 15px;
+          top: -2px;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+          z-index: 0;
+          @include border-radius(100%);
+        }
+
+        &.pulse.active:before {
+          -webkit-animation: pulsePink 1s;
+          -o-animation: pulsePink 1s;
+          animation: pulsePink 1s;
+        }
+      }
+    }
+  }
+  .post-card-links {
+    .link-card:first-child {
+      margin-top: 10px;
+    }
+    .link-card:last-child {
+      margin-bottom: 10px;
+    }
+  }
+  .attachment-list {
+    line-height: 18px;
+  }
+}
